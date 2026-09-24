@@ -1,4 +1,4 @@
-const API_URL = "https://capua-ac-api.onrender.com";
+const API_URL = "https://capua-ac-login.onrender.com";
 
 const welcomeGreeting = document.getElementById('welcomeGreeting');
 const welcomeName = document.getElementById('welcomeName');
