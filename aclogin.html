@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brotherhood Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+
+<main id="gate" class="scene scene--active">
+
+  <div class="gate">
+
+    <div class="gate__crest">
+      <img src="ac-crest.png" alt="Assassin's Creed insignia">
+    </div>
+
+    <h1 class="gate__title">Speak, and Enter</h1>
+    <p class="gate__sub" id="formSub">Nothing is true. Everything is permitted.</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab tab--active" id="tabLogin" role="tab" aria-selected="true">Return</button>
+      <button class="tab" id="tabRegister" role="tab" aria-selected="false">Take the Oath</button>
+    </div>
+
+  
+    <form id="loginForm" class="form form--active" autocomplete="off">
+      <label class="field">
+        <span>Creed Name</span>
+        <input type="text" name="username" placeholder="e.g. Altair_Ibn" required>
+      </label>
+      <label class="field">
+        <span>Cipher</span>
+        <input type="password" name="password" placeholder="••••••••" required>
+      </label>
+      <button type="submit" class="btn btn--gold">Enter the Brotherhood</button>
+    </form>
+
+  
+    <form id="registerForm" class="form">
+      <label class="field">
+        <span>Choose a Creed Name</span>
+        <input type="text" name="username" placeholder="This is how the Brotherhood will know you" required>
+      </label>
+      <label class="field">
+        <span>Set a Cipher</span>
+        <input type="password" name="password" placeholder="••••••••" required>
+      </label>
+
+      <fieldset class="allegiance">
+        <legend>Choose your allegiance</legend>
+
+        <div class="allegiance__options">
+
+          <label class="creed-card creed-card--assassin" id="assassinCard">
+            <input type="radio" name="allegiance" value="assassin" required>
+            <span class="creed-card__art">
+              <img src="ezio.png" alt="">
+            </span>
+            <span class="creed-card__label">
+              <span class="creed-card__name">Assassin</span>
+              <span class="creed-card__motto">We work in the dark to serve the light</span>
+            </span>
+          </label>
+
+          <label class="creed-card creed-card--templar" id="templarCard">
+            <input type="radio" name="allegiance" value="templar" required>
+            <span class="creed-card__art">
+              <img src="templar.png" alt="">
+            </span>
+            <span class="creed-card__label">
+              <span class="creed-card__name">Templar</span>
+              <span class="creed-card__motto">May the Father of Understanding guide us</span>
+            </span>
+          </label>
+
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn btn--gold">Swear the Oath</button>
+    </form>
+
+    <p class="gate__error" id="gateError"></p>
+
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

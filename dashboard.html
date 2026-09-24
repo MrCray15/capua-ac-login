@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanctuary — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+Dash
+<section id="welcome" class="scene scene--active">
+  <img class="welcome__bg" src="ac-marble.png" alt="">
+  <div class="welcome__content">
+    <p class="welcome__eyebrow" id="welcomeEyebrow">The Creed recognizes you</p>
+    <h1 class="welcome__title"><span id="welcomeGreeting">Welcome, Hidden One</span><span id="welcomeName"></span></h1>
+    <p class="welcome__quote" id="welcomeQuote">"Where other men blindly follow the truth, remember — nothing is true. Where other men are limited by morality or law, remember — everything is permitted. We work in the dark to serve the light."</p>
+
+    <div class="dash-grid">
+      <div class="dash-card">
+        <span class="dash-card__label">Rank</span>
+        <span class="dash-card__value" id="dashRank">Novice</span>
+      </div>
+      <div class="dash-card">
+        <span class="dash-card__label">Allegiance</span>
+        <span class="dash-card__value" id="dashAllegiance">—</span>
+      </div>
+      <div class="dash-card">
+        <span class="dash-card__label">Contracts Open</span>
+        <span class="dash-card__value">0</span>
+      </div>
+    </div>
+
+    <div class="dash-actions">
+      <button class="btn btn--ghost" id="homeButton">Home</button>
+      <button class="btn btn--ghost" id="signOut">Return to Login</button>
+    </div>
+
+  </div>
+</section>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
