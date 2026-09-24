@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://capua-ac-api.onrender.com";
 
 const welcomeGreeting = document.getElementById('welcomeGreeting');
 const welcomeName = document.getElementById('welcomeName');
@@ -12,7 +12,7 @@ const homeButton = document.getElementById('homeButton');
 const token = localStorage.getItem('token');
 
 if (!token) {
-  window.location.href = 'ACLogin.html';
+  window.location.href = 'index.html';
 }
 
 const copy = {
@@ -39,7 +39,7 @@ async function loadProfile() {
     if (res.status === 401 || res.status === 403) {
       localStorage.removeItem('token');
       sessionStorage.clear();
-      window.location.href = 'ACLogin.html';
+      window.location.href = 'index.html';
       return;
     }
 
@@ -65,7 +65,7 @@ async function loadProfile() {
     const fallbackName = sessionStorage.getItem('acName');
     const fallbackAllegiance = sessionStorage.getItem('acAllegiance') || 'assassin';
     if (!fallbackName) {
-      window.location.href = 'ACLogin.html';
+      window.location.href = 'index.html';
       return;
     }
     const c = copy[fallbackAllegiance] || copy.assassin;
@@ -88,5 +88,5 @@ signOut.addEventListener('click', () => {
   localStorage.removeItem('token');
   sessionStorage.removeItem('acName');
   sessionStorage.removeItem('acAllegiance');
-  window.location.href = 'ACLogin.html';
+  window.location.href = 'index.html';
 });

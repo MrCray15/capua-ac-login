@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://capua-ac-api.onrender.com";
 
 const tabLogin = document.getElementById('tabLogin');
 const tabRegister = document.getElementById('tabRegister');
